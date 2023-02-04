@@ -1,36 +1,46 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Todo app</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Todo app</title>
+  <style src="style.css"></style>
+  <style src="reset.css"></style>
 </head>
 <body>
+  <header>
+    <h1>TODO</h1>
+    <div id="icon"></div>
+  </header>
 
-  Todo
+  <form action="" class="addTaskForm">
+    <input type="text" placeholder="Créer une nouvelle tâche">
+  </form>
 
-  <!-- Add dynamic number --> items left
-
-  All
-  Active 
-  Completed
-
-  Clear Completed
-
-  Drag and drop to reorder list
-
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+  <div class="TasksList">
+    <ul>
+      <li>Laver les 10 biberons qui traînent</li>
+      <li>Faire une sieste</li>
+      <li>Finir bonnet trop cute commencé il y a 5 mois</li>
+      <li>Acheter gants, masque et pince à linge</li>
+      <li>Lire un livre</li>
+      <li>Apprendre à coder</li>
+    </ul>
   </div>
+
+  <div class="footerList">
+    <div class="counter"><p>5 tâches en cours</p></div>
+
+    <div><p>Supprimer tâches terminées</p></div>
+
+    <div class="filter">
+      <p>Tout</p>
+      <p>En cours</p>
+      <p>Terminé</p>
+    </div>
+    
+  </div>
+
+  
 </body>
 </html>
