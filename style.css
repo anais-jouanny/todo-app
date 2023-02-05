@@ -1,0 +1,28 @@
+body {
+    background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url(./images/background.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color:rgba(210, 105, 30);
+    height: 100vh;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.app {
+    padding: 2em;
+}
+
+header {
+    background-color: aqua;
+    display:inline-flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+header h1 {
+    background-color: blue;
+}
+
+header img {
+    max-width: 2em;
+    max-height: 2em;
+}

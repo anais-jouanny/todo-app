@@ -4,43 +4,45 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Todo app</title>
-  <style src="style.css"></style>
-  <style src="reset.css"></style>
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="./reset.css">
 </head>
 <body>
-  <header>
-    <h1>TODO</h1>
-    <div id="icon"></div>
-  </header>
-
-  <form action="" class="addTaskForm">
-    <input type="text" placeholder="Créer une nouvelle tâche">
-  </form>
-
-  <div class="TasksList">
-    <ul>
-      <li>Laver les 10 biberons qui traînent</li>
-      <li>Faire une sieste</li>
-      <li>Finir bonnet trop cute commencé il y a 5 mois</li>
-      <li>Acheter gants, masque et pince à linge</li>
-      <li>Lire un livre</li>
-      <li>Apprendre à coder</li>
-    </ul>
-  </div>
-
-  <div class="footerList">
-    <div class="counter"><p>5 tâches en cours</p></div>
-
-    <div><p>Supprimer tâches terminées</p></div>
-
-    <div class="filter">
-      <p>Tout</p>
-      <p>En cours</p>
-      <p>Terminé</p>
-    </div>
-    
-  </div>
-
+  <div class="app">
+    <header>
+      <h1>TODO </h1>
+      <img src="./images/icon-moon-black.png" alt="icon-moon-black">
+      
+    </header>
   
+    <form action="" class="addTaskForm">
+      <input type="text" placeholder="Créer une nouvelle tâche">
+    </form>
+  
+    <div class="TasksList">
+      <ul>
+        <li>Laver les 10 biberons qui traînent</li>
+        <li>Faire une sieste</li>
+        <li>Finir bonnet trop cute commencé il y a 5 mois</li>
+        <li>Acheter gants, masque et pince à linge</li>
+        <li>Lire un livre</li>
+        <li>Apprendre à coder</li>
+      </ul>
+    </div>
+  
+    <div class="footerList">
+      <div class="counter"><p>5 tâches en cours</p></div>
+  
+      <div><p>Supprimer tâches terminées</p></div>
+  
+      <div class="filter">
+        <p>Tout</p>
+        <p>En cours</p>
+        <p>Terminé</p>
+      </div>
+
+    </div>
+  </div>
 </body>
 </html>
