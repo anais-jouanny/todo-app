@@ -1,28 +1,76 @@
+/* GENERAL */
 body {
-    background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url(./images/background.png);
+    background: url(./images/background.png);
     background-size: contain;
     background-repeat: no-repeat;
-    background-color:rgba(210, 105, 30);
-    height: 100vh;
-    font-family: 'Josefin Sans', sans-serif;
+    background-color:rgba(210, 105, 30, 0.5);
 }
 
 .app {
-    padding: 2em;
+    padding: 3em 2em;
+    font-family: 'Josefin Sans', sans-serif;
+    overflow: scroll;
 }
 
+@media (min-width: 768px) {
+    body {
+        background-size: 100% 45%;
+    }
+    
+    .app {
+        width: 55%;
+        margin: 0 auto;
+        padding: 5em 0;
+    }
+}
+
+/* HEADER */
 header {
-    background-color: aqua;
-    display:inline-flex;
-    flex-direction: row;
-    justify-content: space-around;
+    position: relative;
+    height: 2em;
 }
 
 header h1 {
-    background-color: blue;
+    font-size:xx-large;
+    font-weight: 700;
 }
 
-header img {
-    max-width: 2em;
-    max-height: 2em;
+header .dark-mode {
+    height: 100%;
+    position: absolute;
+    right: 0;
+    top: -.2em;
+}
+
+/* FORM */
+.addTaskForm {
+    margin: 2em 0;
+    text-align: center;
+}
+
+.addTaskForm input {
+    padding: 1em;
+    width: 100%;
+    border: 1px solid chocolate;
+    border-radius: 4px;
+}
+
+/* LIST */
+
+.tasksList {
+    border: 1px solid chocolate;
+    border-radius: 4px;
+    background-color: white;
+}
+.tasksList li {
+    padding:1em;
+    width: 100%;
+    border-bottom: 1px solid chocolate;
+    font-size: small;
+    white-space: nowrap;
+    overflow: scroll;
+}
+
+.tasksList li:last-child {
+    border-bottom: none;
 }
