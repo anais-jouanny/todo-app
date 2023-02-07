@@ -1,9 +1,9 @@
 /* GENERAL */
 body {
-    background: url(./images/background.png);
+    background: url(./images/todo_bg_app.png);
     background-size: contain;
     background-repeat: no-repeat;
-    background-color:rgba(210, 105, 30, 0.5);
+    background-color:rgba(210, 105, 30, 0.45);
 }
 
 .app {
@@ -13,12 +13,15 @@ body {
 
 @media (min-width: 768px) {
     body {
-        background-size: contain;
-        background-position: center;
+        background: url(./images/todo_bg_desktop.png);
+        background-size: 100% 50%;
+        background-repeat: no-repeat;
+        background-color:rgba(210, 105, 30, 0.45);
+        height: 100vh;
     }
     
     .app {
-        width: 45%;
+        width: 55%;
         margin: 0 auto;
         padding: 5em 0;
     }
@@ -47,6 +50,10 @@ header span {
     box-shadow: 2px 2px 2px rgb(97, 97, 97);
 }
 
+header span:hover {
+    border: 2px solid #e7b089;
+}
+
 /* FORM */
 .addTaskForm {
     margin: 2em 0;
@@ -68,7 +75,7 @@ header span {
     background-color: white;
 }
 .tasksList li {
-    padding:1em;
+    padding: .8em;
     width: 100%;
     border-bottom: 1px solid chocolate;
     font-size: small;
@@ -76,14 +83,29 @@ header span {
     overflow-x: auto;
 }
 
-.tasksList span {
-    height: 2em;
-    width: 2em;
-    
+@media (min-width: 768px) {
+    .tasksList li  {
+        font-size: medium;
+    }
+}
+
+.tasksList div {
+    width: 1.3em;
+    height: 1.3em;
+    border: 1px solid chocolate;
+    border-radius: 50%;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 1em;
 }
 
 .task-done {
     text-decoration:line-through;
+    color: grey;
+}
+
+.circle-done {
+    background-color: #e7b089;
 }
 
 .tasksList li:last-child {
