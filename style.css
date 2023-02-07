@@ -7,18 +7,18 @@ body {
 }
 
 .app {
-    padding: 3em 2em;
+    padding: 3.5em 2em;
     font-family: 'Josefin Sans', sans-serif;
-    overflow: scroll;
 }
 
 @media (min-width: 768px) {
     body {
-        background-size: 100% 45%;
+        background-size: contain;
+        background-position: center;
     }
     
     .app {
-        width: 55%;
+        width: 45%;
         margin: 0 auto;
         padding: 5em 0;
     }
@@ -27,19 +27,24 @@ body {
 /* HEADER */
 header {
     position: relative;
-    height: 2em;
 }
 
 header h1 {
-    font-size:xx-large;
+    font-size: xx-large;
     font-weight: 700;
+    color: white;
+    text-shadow: 2px 2px grey;
 }
 
-header .dark-mode {
-    height: 100%;
+header span {
     position: absolute;
     right: 0;
-    top: -.2em;
+    top: -.3em;
+    padding: .25em .25em 0 0;
+    text-shadow: none;
+    background-color: #e7b089;
+    border-radius: 4px;
+    box-shadow: 2px 2px 2px rgb(97, 97, 97);
 }
 
 /* FORM */
@@ -59,7 +64,7 @@ header .dark-mode {
 
 .tasksList {
     border: 1px solid chocolate;
-    border-radius: 4px;
+    border-radius: 4px 4px 0 0;
     background-color: white;
 }
 .tasksList li {
@@ -68,9 +73,96 @@ header .dark-mode {
     border-bottom: 1px solid chocolate;
     font-size: small;
     white-space: nowrap;
-    overflow: scroll;
+    overflow-x: auto;
+}
+
+.tasksList span {
+    height: 2em;
+    width: 2em;
+    
+}
+
+.task-done {
+    text-decoration:line-through;
 }
 
 .tasksList li:last-child {
     border-bottom: none;
+    border-radius: 0 0 4px 4px;
+}
+
+/* FOOTER */
+.footerList {
+    display: flex;
+    justify-content: space-between;
+    column-gap: 2em;
+    background-color: white;
+    border: 1px solid chocolate;
+    border-top: none;
+    border-radius: 0 0 4px 4px;
+    padding: 1em .5em;
+    width: 100%;
+    font-size: small;
+    color: grey;
+    text-align: center;
+}
+
+.footerList div:nth-child(even):hover {
+    cursor: pointer;
+    color: black;
+}
+
+.footerList span {
+    font-weight: bold;
+}
+
+.filter {
+    position: absolute;
+    margin-top: 3.5em;
+    padding: .7em;
+    border: 1px solid chocolate;
+    border-radius: 4px;
+    background-color: white;
+    font-size: medium;
+    font-weight: bold;
+    width: 15em;
+    left: 50%;
+    transform: translate(-50%);
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+}
+
+.filter p:hover {
+    cursor: pointer;
+    color: black;
+}
+
+.footerList .counter {
+    order:0;
+}
+
+.footerList div:nth-child(even) {
+    order:1;
+}
+
+@media (min-width: 768px) {
+    .footerList {
+        align-items: center;
+    }
+
+    .filter {
+        position: static;
+        border: none;
+        margin: 0;
+        padding: 0;
+        width: fit-content;
+        transform: none;
+        order: 1;
+
+    }
+
+    .footerList div:nth-child(even) {
+        order:2;
+    }
 }
