@@ -1,0 +1,76 @@
+
+/* FOOTER */
+.Footer {
+    display: flex;
+    justify-content: space-between;
+    column-gap: 2em;
+    background-color: white;
+    border: 1px solid chocolate;
+    border-top: none;
+    border-radius: 0 0 4px 4px;
+    padding: 1em .5em;
+    width: 100%;
+    font-size: small;
+    color: grey;
+    text-align: center;
+}
+
+.Footer div:nth-child(even):hover {
+    cursor: pointer;
+    color: black;
+}
+
+.Footer span {
+    font-weight: bold;
+}
+
+.filter {
+    position: absolute;
+    margin-top: 3.5em;
+    padding: .7em;
+    border: 1px solid chocolate;
+    border-radius: 4px;
+    background-color: white;
+    font-size: medium;
+    font-weight: bold;
+    width: 15em;
+    left: 50%;
+    transform: translate(-50%);
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+}
+
+.filter p:hover {
+    cursor: pointer;
+    color: black;
+}
+
+.Footer .counter {
+    order:0;
+}
+
+.Footer div:nth-child(even) {
+    order:1;
+}
+
+@media (min-width: 768px) {
+    .Footer {
+        align-items: center;
+    }
+
+    .filter {
+        position: static;
+        border: none;
+        margin: 0;
+        padding: 0;
+        width: fit-content;
+        transform: none;
+        order: 1;
+
+    }
+
+    .Footer div:nth-child(even) {
+        order:2;
+    }
+}

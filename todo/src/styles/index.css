@@ -1,0 +1,17 @@
+/* GENERAL */
+body {
+  background: url(../../public/images/todo_bg_app.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-color:rgba(210, 105, 30, 0.45);
+}
+
+@media (min-width: 768px) {
+  body {
+      background: url(../../public/images/todo_bg_desktop.png);
+      background-size: 100% 55%;
+      background-repeat: no-repeat;
+      background-color:rgba(210, 105, 30, 0.45);
+      height: 100vh;
+  }
+}

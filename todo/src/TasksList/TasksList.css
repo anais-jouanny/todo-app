@@ -1,0 +1,45 @@
+/* LIST */
+
+.TasksList {
+    border: 1px solid chocolate;
+    border-radius: 4px 4px 0 0;
+    background-color: white;
+}
+.TasksList li {
+    padding: .8em;
+    width: 100%;
+    border-bottom: 1px solid chocolate;
+    font-size: small;
+    white-space: nowrap;
+    overflow-x: auto;
+}
+
+@media (min-width: 768px) {
+    .TasksList li  {
+        font-size: medium;
+    }
+}
+
+.TasksList div {
+    width: 1.3em;
+    height: 1.3em;
+    border: 1px solid chocolate;
+    border-radius: 50%;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 1em;
+}
+
+.task-done {
+    text-decoration:line-through;
+    color: grey;
+}
+
+.circle-done {
+    background-color: #e7b089;
+}
+
+.TasksList li:last-child {
+    border-bottom: none;
+    border-radius: 0 0 4px 4px;
+}
