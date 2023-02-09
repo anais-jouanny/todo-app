@@ -10,3 +10,8 @@
     border: 1px solid chocolate;
     border-radius: 4px;
 }
+
+.form-dark input {
+    background-color: black;
+    color: rgb(133, 64, 16);
+}

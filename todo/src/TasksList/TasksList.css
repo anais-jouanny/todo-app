@@ -5,6 +5,12 @@
     border-radius: 4px 4px 0 0;
     background-color: white;
 }
+
+.list-dark {
+    background-color: black;
+    color: rgb(133, 64, 16);
+}
+
 .TasksList li {
     padding: .8em;
     width: 100%;

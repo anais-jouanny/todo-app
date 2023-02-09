@@ -35,3 +35,7 @@ header .icon-dark {
     background: url(../images/icon-sun.svg) no-repeat center;
     background-color: rgb(133, 64, 16);
 }
+
+.Header-dark h1 {
+    color: rgb(133, 64, 16);
+}

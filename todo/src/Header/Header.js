@@ -2,6 +2,7 @@ import PropTypes from 'prop-types';
 import './Header.css';
 
 function Header({ darkMode, toggleDarkMode }) {
+    const cssClassHeader = darkMode ? 'Header-dark' : '';
     const cssClassIcon = darkMode ? 'icon icon-dark' : 'icon icon-light';
     
     const handleClick = () => {
@@ -10,7 +11,7 @@ function Header({ darkMode, toggleDarkMode }) {
     };
 
     return (
-        <div>
+        <div className={cssClassHeader}>
             <header>
                 <h1>TODO<span className={cssClassIcon} onClick={handleClick}></span></h1>
             </header>
