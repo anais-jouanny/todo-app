@@ -1,9 +1,10 @@
+import PropTypes from 'prop-types';
 import './Footer.css';
 
-function Footer() {
+function Footer( { currentTasks }) {
     return (
         <div className="Footer">
-            <div className="counter"><span>5</span> tâches en cours</div>
+            <div className="counter"><span>{currentTasks}</span> tâches en cours</div>
   
             <div>Supprimer tâches finies</div>
 
@@ -15,5 +16,9 @@ function Footer() {
         </div>
     );
   }
+
+Footer.propTypes = {
+    currentTasks: PropTypes.number.isRequired,
+}
   
 export default Footer;  

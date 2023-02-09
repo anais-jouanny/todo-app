@@ -1,0 +1,37 @@
+/* HEADER */
+
+header {
+    position: relative;
+}
+
+header h1 {
+    font-size: xx-large;
+    font-weight: 700;
+    color: white;
+    text-shadow: 2px 2px grey;
+}
+
+header .icon {
+    height: 1.5em;
+    width: 1.5em;
+    position: absolute;
+    right: 0;
+    top: -.3em;
+    border-radius: 4px;
+    box-shadow: 2px 2px 2px rgb(97, 97, 97); 
+}
+
+header .icon:hover {
+    box-shadow: 1px 1px 3px rgb(97, 97, 97);
+    transform: scale(0.9);
+}
+
+header .icon-light {
+    background: url(../images/icon-moon.svg) no-repeat center;
+    background-color: #e7b089;
+}
+
+header .icon-dark {
+    background: url(../images/icon-sun.svg) no-repeat center;
+    background-color: rgb(133, 64, 16);
+}
