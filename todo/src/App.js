@@ -28,15 +28,29 @@ function App() {
     });
 
     setTasksList(updatedTasks);
-  }
+  };
 
-  console.log(tasksList);
+  const addTask = () => {
+    const tasksIds = tasksList.map((task) => task.id);
+    const maxId = Math.max(...tasksIds);
+    const newTaskId = maxId + 1;
+
+    const newTask = {
+      id: newTaskId,
+      name: newTaskName,
+      done: false,
+    }
+
+    setTasksList([...tasksList, newTask])
+
+    setNewTaskName('');
+  };
   
   
   return (
     <div className="App">
       <Header darkMode={darkMode} toggleDarkMode={() => {setDarkMode(!darkMode)}} />
-      <AddTaskForm darkMode={darkMode} newTaskName={newTaskName} setNewTaskName={setNewTaskName} />
+      <AddTaskForm darkMode={darkMode} newTaskName={newTaskName} setNewTaskName={setNewTaskName} addTask={addTask} />
       <TasksList tasksList={tasksList} darkMode={darkMode} toggleTask={toggleTask} />
       <Footer currentTasks={currentTasks.length} darkMode={darkMode} />
     </div>
