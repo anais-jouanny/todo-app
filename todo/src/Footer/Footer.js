@@ -6,7 +6,7 @@ function Footer( { currentTasks, darkMode }) {
 
     return (
         <div className={cssClass}>
-            <div className="counter"><span>{currentTasks}</span> tâches en cours</div>
+            <div className="counter"><span>{currentTasks}</span> tâche{currentTasks < 2 ? '' : 's'} en cours</div>
   
             <div>Supprimer tâches finies</div>
 
