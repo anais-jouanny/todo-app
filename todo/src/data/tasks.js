@@ -2,7 +2,7 @@ const datas = [
     {
         id: 1,
         name: 'Laver les 10 biberons qui traînent',
-        done: false,
+        done: true,
     },
     {
         id: 2,

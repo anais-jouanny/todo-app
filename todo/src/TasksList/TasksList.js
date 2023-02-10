@@ -8,12 +8,11 @@ function TasksList( { tasksList, darkMode }) {
         <div className={cssClassDiv}>
             <ul>
                 {tasksList.map((task) => {
-                    const cssClassLi = task.done ? 'task-done' : '';
-                    const cssClassCircle = task.done ? 'circle-done' : '';
+                    const cssClassLi = task.done ? '-done' : '';
 
                     return (
-                        <li className={cssClassLi} key={task.id}>
-                            <div className={cssClassCircle}></div>
+                        <li className={`task${cssClassLi}`} key={task.id}>
+                            <div className={`circle${cssClassLi}`}></div>
                         {task.name}
                         </li>
                     )

@@ -8,14 +8,15 @@ body {
 
 @media (min-width: 768px) {
   body {
-      background: url(../images/todo_bg_desktop.png);
-      background-size: 100% 55%;
-      background-repeat: no-repeat;
-      background-color:rgba(210, 105, 30, 0.45);
-      height: 100vh;
+    background: url(../images/todo_bg_desktop.png);
+    background-size: 100% 55%;
+    background-repeat: no-repeat;
+    background-color:rgba(210, 105, 30, 0.45);
+    height: 100vh;
   }
 }
 
 .body-dark {
   background-color: rgb(133, 64, 16);
+  background-image: url(../images/todo_bg_dark.png);
 }

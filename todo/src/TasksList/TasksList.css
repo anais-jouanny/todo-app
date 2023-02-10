@@ -6,11 +6,6 @@
     background-color: white;
 }
 
-.list-dark {
-    background-color: black;
-    color: rgb(133, 64, 16);
-}
-
 .TasksList li {
     padding: .8em;
     width: 100%;
@@ -36,6 +31,14 @@
     margin-right: 1em;
 }
 
+.TasksList li:last-child {
+    border-bottom: none;
+    border-radius: 0 0 4px 4px;
+}
+
+
+/* TASK DONE */
+
 .task-done {
     text-decoration:line-through;
     color: grey;
@@ -45,7 +48,15 @@
     background-color: #e7b089;
 }
 
-.TasksList li:last-child {
-    border-bottom: none;
-    border-radius: 0 0 4px 4px;
+
+
+/* DARKMODE */
+
+.list-dark {
+    background-color: black;
+    color: rgb(133, 64, 16);
+}
+
+.list-dark .circle-done {
+    background-color: rgb(133, 64, 16);
 }

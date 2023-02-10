@@ -18,7 +18,9 @@ header .icon {
     right: 0;
     top: -.3em;
     border-radius: 4px;
-    box-shadow: 2px 2px 2px rgb(97, 97, 97); 
+    box-shadow: 2px 2px 2px rgb(97, 97, 97);
+    background: url(../images/icon-moon.svg) no-repeat center;
+    background-color: #e7b089; 
 }
 
 header .icon:hover {
@@ -26,16 +28,14 @@ header .icon:hover {
     transform: scale(0.9);
 }
 
-header .icon-light {
-    background: url(../images/icon-moon.svg) no-repeat center;
-    background-color: #e7b089;
+/* DARKMODE */
+
+.dark h1 {
+    color: rgb(133, 64, 16);
+    text-shadow: 2px 2px black;
 }
 
-header .icon-dark {
+.dark .icon {
     background: url(../images/icon-sun.svg) no-repeat center;
     background-color: rgb(133, 64, 16);
-}
-
-.Header-dark h1 {
-    color: rgb(133, 64, 16);
 }
