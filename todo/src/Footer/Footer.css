@@ -37,6 +37,10 @@
     gap: 1em;
 }
 
+.filter .active {
+    text-decoration: underline 2px;
+}
+
 .Footer div:nth-child(even):hover,
 .filter p:hover {
     cursor: pointer;
@@ -83,4 +87,8 @@
 .Footer-dark .filter p:hover {
     cursor: pointer;
     color: rgb(133, 64, 16);
+}
+
+.Footer-dark .active {
+    text-decoration: underline 2px rgb(133, 64, 16);
 }

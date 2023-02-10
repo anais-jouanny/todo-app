@@ -7,6 +7,7 @@ import Footer from './Footer/Footer';
 import TasksList from './TasksList/TasksList';
 import Header from './Header/Header';
 import datas from './data/tasks';
+import { Route, Routes } from 'react-router-dom';
 
 function App() {
 
@@ -14,7 +15,8 @@ function App() {
   const [darkMode, setDarkMode] = useState(false);
   const [newTaskName, setNewTaskName] = useState('');
 
-  const currentTasks = tasksList.filter((task) => !task.done);
+  const pendingTasks = tasksList.filter((task) => !task.done);
+  const doneTasks = tasksList.filter((task) => task.done);
 
   const toggleTask = (taskId) => {
     const updatedTasks = tasksList.map((task) => {
@@ -47,7 +49,7 @@ function App() {
   };
 
   const deleteAllTasks = () => {
-    setTasksList(currentTasks);
+    setTasksList(pendingTasks);
   };
 
   const deleteTask = (taskId) => {
@@ -61,8 +63,14 @@ function App() {
     <div className="App">
       <Header darkMode={darkMode} toggleDarkMode={() => {setDarkMode(!darkMode)}} />
       <AddTaskForm darkMode={darkMode} newTaskName={newTaskName} setNewTaskName={setNewTaskName} addTask={addTask} />
-      <TasksList tasksList={tasksList} darkMode={darkMode} toggleTask={toggleTask} deleteTask={deleteTask} />
-      <Footer currentTasks={currentTasks.length} darkMode={darkMode} deleteAllTasks={deleteAllTasks} />
+      
+      <Routes>
+        <Route path="/" element={<TasksList tasksList={tasksList} darkMode={darkMode} toggleTask={toggleTask} deleteTask={deleteTask} />} />
+        <Route path="/pending" element={<TasksList tasksList={pendingTasks} darkMode={darkMode} toggleTask={toggleTask} deleteTask={deleteTask} />} />
+        <Route path="/done" element={<TasksList tasksList={doneTasks} darkMode={darkMode} toggleTask={toggleTask} deleteTask={deleteTask} />} />
+      </Routes>
+      
+      <Footer pendingTasks={pendingTasks.length} darkMode={darkMode} deleteAllTasks={deleteAllTasks} />
     </div>
   );
 }

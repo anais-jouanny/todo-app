@@ -21,7 +21,7 @@
     }
 }
 
-.TasksList .circle {
+.TasksList div:first-child {
     width: 1.3em;
     height: 1.3em;
     border: 1px solid chocolate;
@@ -37,7 +37,7 @@
 }
 
 .TasksList .delete {
-    display: inline;
+    display: inline-block;
     vertical-align: middle;
     color: darkred;
     margin-left: 1em;
@@ -56,10 +56,9 @@
     color: grey;
 }
 
-.circle-done {
+.task-done .circle {
     background-color: #e7b089;
 }
-
 
 
 /* DARKMODE */
@@ -69,6 +68,6 @@
     color: rgb(133, 64, 16);
 }
 
-.list-dark .circle-done {
+.list-dark .task-done .circle {
     background-color: rgb(133, 64, 16);
 }

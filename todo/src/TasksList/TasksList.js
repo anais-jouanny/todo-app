@@ -8,21 +8,21 @@ function TasksList( { tasksList, darkMode, toggleTask, deleteTask }) {
         <div className={cssClassDiv}>
             <ul>
                 {tasksList.map((task) => {
-                    const cssClassLi = task.done ? '-done' : '';
+                    const cssClassLi = task.done ? 'task task-done' : 'task';
 
                     return (
-                        <li className={`task${cssClassLi}`} key={task.id}>
+                        <li className={cssClassLi} key={task.id}>
                             <div
-                                className={`circle${cssClassLi}`}
+                                className="circle"
                                 onClick={() => toggleTask(task.id)}
                             >
                             </div>
                         {task.name}
-                            <div
+                            <span
                                 className='delete'
                                 onClick={() => deleteTask(task.id)}>
                                     &#10060;
-                            </div>
+                            </span>
                         </li>
                     )
                 })}
