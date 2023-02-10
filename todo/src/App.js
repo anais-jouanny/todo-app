@@ -12,6 +12,7 @@ function App() {
 
   const [tasksList, setTasksList] = useState(datas);
   const [darkMode, setDarkMode] = useState(false);
+  const [newTaskName, setNewTaskName] = useState('');
 
   const currentTasks = tasksList.filter((task) => !task.done);
 
@@ -35,7 +36,7 @@ function App() {
   return (
     <div className="App">
       <Header darkMode={darkMode} toggleDarkMode={() => {setDarkMode(!darkMode)}} />
-      <AddTaskForm darkMode={darkMode} />
+      <AddTaskForm darkMode={darkMode} newTaskName={newTaskName} setNewTaskName={setNewTaskName} />
       <TasksList tasksList={tasksList} darkMode={darkMode} toggleTask={toggleTask} />
       <Footer currentTasks={currentTasks.length} darkMode={darkMode} />
     </div>

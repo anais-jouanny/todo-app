@@ -33,6 +33,7 @@ TasksList.propTypes = {
         done: PropTypes.bool.isRequired,
     })).isRequired,
     darkMode: PropTypes.bool.isRequired,
+    toggleTask: PropTypes.func.isRequired,
 };
   
 export default TasksList;  
