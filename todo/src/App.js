@@ -15,6 +15,20 @@ function App() {
 
   const currentTasks = tasksList.filter((task) => !task.done);
 
+  const toggleTask = (taskId) => {
+    const updatedTasks = tasksList.map((task) => {
+      if (task.id === taskId) {
+        return {
+          ...task,
+          done: !task.done,
+        }
+      }
+      return task;
+    });
+
+    setTasksList(updatedTasks);
+  }
+
   console.log(tasksList);
   
   
@@ -22,7 +36,7 @@ function App() {
     <div className="App">
       <Header darkMode={darkMode} toggleDarkMode={() => {setDarkMode(!darkMode)}} />
       <AddTaskForm darkMode={darkMode} />
-      <TasksList tasksList={tasksList} darkMode={darkMode} />
+      <TasksList tasksList={tasksList} darkMode={darkMode} toggleTask={toggleTask} />
       <Footer currentTasks={currentTasks.length} darkMode={darkMode} />
     </div>
   );

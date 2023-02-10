@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import './TasksList.css';
 
-function TasksList( { tasksList, darkMode }) {
+function TasksList( { tasksList, darkMode, toggleTask }) {
     const cssClassDiv = darkMode ? 'TasksList list-dark' : 'TasksList';
 
     return (
@@ -12,7 +12,11 @@ function TasksList( { tasksList, darkMode }) {
 
                     return (
                         <li className={`task${cssClassLi}`} key={task.id}>
-                            <div className={`circle${cssClassLi}`}></div>
+                            <div
+                                className={`circle${cssClassLi}`}
+                                onClick={() => toggleTask(task.id)}
+                            >
+                            </div>
                         {task.name}
                         </li>
                     )
