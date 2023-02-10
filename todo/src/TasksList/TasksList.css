@@ -21,7 +21,7 @@
     }
 }
 
-.TasksList div {
+.TasksList .circle {
     width: 1.3em;
     height: 1.3em;
     border: 1px solid chocolate;
@@ -34,6 +34,18 @@
 .TasksList li:last-child {
     border-bottom: none;
     border-radius: 0 0 4px 4px;
+}
+
+.TasksList .delete {
+    display: inline;
+    vertical-align: middle;
+    color: darkred;
+    margin-left: 1em;
+    font-size: large;
+}
+
+.TasksList .delete:hover {
+    cursor: pointer;
 }
 
 

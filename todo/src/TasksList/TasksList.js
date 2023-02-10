@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import './TasksList.css';
 
-function TasksList( { tasksList, darkMode, toggleTask }) {
+function TasksList( { tasksList, darkMode, toggleTask, deleteTask }) {
     const cssClassDiv = darkMode ? 'TasksList list-dark' : 'TasksList';
 
     return (
@@ -18,6 +18,11 @@ function TasksList( { tasksList, darkMode, toggleTask }) {
                             >
                             </div>
                         {task.name}
+                            <div
+                                className='delete'
+                                onClick={() => deleteTask(task.id)}>
+                                    &#10060;
+                            </div>
                         </li>
                     )
                 })}
@@ -34,6 +39,7 @@ TasksList.propTypes = {
     })).isRequired,
     darkMode: PropTypes.bool.isRequired,
     toggleTask: PropTypes.func.isRequired,
+    deleteTask: PropTypes.func.isRequired,
 };
   
 export default TasksList;  

@@ -45,14 +45,24 @@ function App() {
 
     setNewTaskName('');
   };
+
+  const deleteAllTasks = () => {
+    setTasksList(currentTasks);
+  };
+
+  const deleteTask = (taskId) => {
+    const updatedTasks = tasksList.filter((task) => task.id !== taskId);
+
+    setTasksList(updatedTasks);
+  };
   
   
   return (
     <div className="App">
       <Header darkMode={darkMode} toggleDarkMode={() => {setDarkMode(!darkMode)}} />
       <AddTaskForm darkMode={darkMode} newTaskName={newTaskName} setNewTaskName={setNewTaskName} addTask={addTask} />
-      <TasksList tasksList={tasksList} darkMode={darkMode} toggleTask={toggleTask} />
-      <Footer currentTasks={currentTasks.length} darkMode={darkMode} />
+      <TasksList tasksList={tasksList} darkMode={darkMode} toggleTask={toggleTask} deleteTask={deleteTask} />
+      <Footer currentTasks={currentTasks.length} darkMode={darkMode} deleteAllTasks={deleteAllTasks} />
     </div>
   );
 }
