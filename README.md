@@ -14,7 +14,7 @@
 
 Les utilisateurs doivent être en mesure de :
 
-- Voir les états de survol de tous les éléments interactifs de la page
+- Voir les états de survol/clic de tous les éléments interactifs de la page
 - Ajouter de nouvelles tâches à la liste
 - Marquer les tâches comme terminées
 - Supprimer des tâches de la liste (individuellement ou de manière groupée)
